@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.calculator-container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    background: linear-gradient(45deg, #4a9eff, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.subtitle {
+    color: #8a8aa3;
+    margin-top: 0.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.value-display {
+    background: rgba(74, 158, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.price-slider {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    -webkit-appearance: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4a9eff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.features {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.feature-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.toggle-indicator {
+    width: 40px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.toggle-indicator::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.feature-toggle.active .toggle-indicator::before {
+    transform: translateX(20px);
+    background: #4a9eff;
+}
+
+.total-price {
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.price-wrapper {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.currency {
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.price-period {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.savings-badge {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: #4a9eff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.subscribe-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #4a9eff, #6c63ff);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 1.5rem;
+    }
+    
+    .price-wrapper {
+        font-size: 2.5rem;
+    }
+}

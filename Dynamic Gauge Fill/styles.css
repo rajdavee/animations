@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.dashboard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.gauge-container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.gauge {
+    width: 100%;
+    overflow: visible;
+}
+
+.gauge-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 15;
+    stroke-linecap: round;
+}
+
+.gauge-bg, .gauge-fill {
+    fill: none;
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+.gauge-fill {
+    fill: none;
+    stroke: url(#gaugeGradient);
+    stroke-width: 15;
+    stroke-linecap: round;
+    transition: stroke 0.3s;
+    filter: drop-shadow(0 0 5px rgba(74, 158, 255, 0.5));
+}
+
+.gauge-value {
+    font-size: 24px;
+    fill: white;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+.gauge-label {
+    font-size: 14px;
+    fill: rgba(255, 255, 255, 0.7);
+    text-anchor: middle;
+}
+
+.controls {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.gauge-slider {
+    width: 100%;
+    margin: 1rem 0;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.gauge-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4a9eff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gauge-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.control-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.control-btn:hover {
+    background: rgba(74, 158, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+}

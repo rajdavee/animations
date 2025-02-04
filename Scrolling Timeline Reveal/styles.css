@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background: #0a0a2e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.timeline-container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(45deg, #4a9eff, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+    opacity: 0;
+}
+
+.timeline-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #4a9eff;
+    background: rgba(10, 10, 46, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.timeline-item:nth-child(even) .content-card {
+    transform: translateX(-100px);
+}
+
+.milestone-icon {
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .timeline-content {
+        margin: 0 2rem;
+    }
+    
+    .content-card {
+        transform: translateY(50px) !important;
+    }
+}

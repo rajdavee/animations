@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a2e;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blob-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.blob-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.blob {
+    fill: url(#gradient);
+    filter: url(#glow);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shape-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.shape-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes gradient-rotation {
+    0% { stop-color: #4a9eff; }
+    50% { stop-color: #6c63ff; }
+    100% { stop-color: #4a9eff; }
+}
+
+.gradient-stop-1 {
+    animation: gradient-rotation 4s infinite;
+}
+
+.gradient-stop-2 {
+    animation: gradient-rotation 4s infinite reverse;
+}

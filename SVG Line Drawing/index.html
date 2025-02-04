@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Line Drawing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="drawing-container">
+      <svg viewBox="0 0 800 600" class="illustration">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4a9eff" />
+            <stop offset="100%" stop-color="#6c63ff" />
+          </linearGradient>
+          <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#63ffdb" />
+            <stop offset="100%" stop-color="#4a9eff" />
+          </linearGradient>
+        </defs>
+
+        <g class="drawing-group" filter="url(#glow)">
+          <!-- Geometric Pattern -->
+          <path
+            class="draw-path geometric"
+            d="M400,100 L500,200 L400,300 L300,200 Z 
+                       M400,150 L450,200 L400,250 L350,200 Z"
+            stroke="url(#gradient1)"
+          />
+
+          <!-- Abstract Wave -->
+          <path
+            class="draw-path wave"
+            d="M100,200 C150,100 200,300 250,200 
+                       C300,100 350,300 400,200 
+                       C450,100 500,300 550,200 
+                       C600,100 650,300 700,200"
+            stroke="url(#gradient2)"
+          />
+
+          <!-- Circular Design -->
+          <path
+            class="draw-path circles"
+            d="M400,300 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0
+                       M400,300 m-50,0 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0
+                       M400,300 m-25,0 a25,25 0 1,1 50,0 a25,25 0 1,1 -50,0"
+            stroke="#4a9eff"
+          />
+
+          <!-- Connecting Lines -->
+          <path
+            class="draw-path connections"
+            d="M400,100 L400,225 M350,200 L250,300 
+                       M450,200 L550,300 M300,200 L400,400 
+                       M500,200 L400,400"
+            stroke="#6c63ff"
+          />
+
+          <!-- Decorative Elements -->
+          <path
+            class="draw-path decorative"
+            d="M200,450 Q300,350 400,450 Q500,550 600,450
+                       M150,500 Q300,400 400,500 Q500,600 650,500"
+            stroke="#63ffdb"
+          />
+        </g>
+      </svg>
+
+      <div class="controls">
+        <button class="control-btn draw-btn">Draw</button>
+        <button class="control-btn erase-btn">Erase</button>
+        <div class="speed-control">
+          <label>Speed</label>
+          <input
+            type="range"
+            min="0.5"
+            max="3"
+            step="0.5"
+            value="1"
+            class="speed-slider"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="drawing.js"></script>
+  </body>
+</html>

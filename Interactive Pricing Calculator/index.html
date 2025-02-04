@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="pricing-header">
+        <h1>Pricing Calculator</h1>
+        <p class="subtitle">Adjust sliders to see pricing changes</p>
+      </div>
+
+      <div class="calculator">
+        <div class="input-group">
+          <label>
+            Users
+            <span class="value-display" data-value="users">10</span>
+          </label>
+          <input
+            type="range"
+            class="price-slider"
+            data-type="users"
+            min="1"
+            max="100"
+            value="10"
+          />
+        </div>
+
+        <div class="input-group">
+          <label>
+            Storage (GB)
+            <span class="value-display" data-value="storage">5</span>
+          </label>
+          <input
+            type="range"
+            class="price-slider"
+            data-type="storage"
+            min="5"
+            max="100"
+            value="5"
+          />
+        </div>
+
+        <div class="features">
+          <button class="feature-toggle" data-feature="support">
+            <span class="toggle-indicator"></span>
+            Premium Support
+          </button>
+          <button class="feature-toggle" data-feature="backup">
+            <span class="toggle-indicator"></span>
+            Daily Backup
+          </button>
+        </div>
+
+        <div class="total-price">
+          <div class="price-wrapper">
+            <span class="currency">$</span>
+            <span class="price-value">29</span>
+            <span class="price-period">/month</span>
+          </div>
+          <div class="savings-badge">Save 20%</div>
+        </div>
+
+        <button class="subscribe-btn">Get Started</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Ripple Effect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="ripple-grid">
+        <button class="ripple-btn primary">
+          <span class="btn-text">Primary Action</span>
+        </button>
+        <button class="ripple-btn secondary">
+          <span class="btn-text">Secondary</span>
+        </button>
+        <div class="ripple-card">
+          <h3>Interactive Card</h3>
+          <p>Hover or click anywhere</p>
+        </div>
+        <div class="ripple-icon">
+          <span class="icon">🚀</span>
+          <span class="label">Launch</span>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="ripple.js"></script>
+  </body>
+</html>

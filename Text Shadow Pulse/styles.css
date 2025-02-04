@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.pulse-text {
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 20px;
+}
+
+#togglePulse {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#togglePulse:hover {
+    background: #444;
+}

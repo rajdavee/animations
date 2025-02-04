@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layered Image Reveal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gallery-container">
+      <div class="image-wrapper">
+        <div class="layer base-layer">
+          <img src="https://picsum.photos/800/600?random=1" alt="Base Layer" />
+        </div>
+        <div class="layer middle-layer">
+          <img
+            src="https://picsum.photos/800/600?random=2"
+            alt="Middle Layer"
+          />
+        </div>
+        <div class="layer top-layer">
+          <img src="https://picsum.photos/800/600?random=3" alt="Top Layer" />
+        </div>
+        <div class="reveal-mask"></div>
+        <div class="content-overlay">
+          <h2>Urban Dreams</h2>
+          <p>Click to explore layers</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reveal-btn">Reveal Layers</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="reveal.js"></script>
+  </body>
+</html>

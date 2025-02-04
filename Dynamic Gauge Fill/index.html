@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Gauge Fill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="gauge-container">
+        <svg class="gauge" viewBox="0 0 200 150">
+          <defs>
+            <linearGradient
+              id="gaugeGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stop-color="#4a9eff" />
+              <stop offset="100%" stop-color="#6c63ff" />
+            </linearGradient>
+          </defs>
+          <path
+            class="gauge-bg"
+            d="M40,120 A60,60 0 1,1 160,120"
+            stroke-width="12"
+            stroke-linecap="round"
+          />
+          <path
+            class="gauge-fill"
+            d="M40,120 A60,60 0 1,1 160,120"
+            stroke-width="12"
+            stroke-linecap="round"
+          />
+          <text class="gauge-value" x="100" y="85">0%</text>
+          <text class="gauge-label" x="100" y="105">Progress</text>
+        </svg>
+      </div>
+
+      <div class="controls">
+        <input type="range" class="gauge-slider" min="0" max="100" value="0" />
+        <div class="buttons">
+          <button class="control-btn" data-value="25">25%</button>
+          <button class="control-btn" data-value="50">50%</button>
+          <button class="control-btn" data-value="75">75%</button>
+          <button class="control-btn" data-value="100">100%</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="gauge.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Timeline</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="timeline-container">
+      <h1 class="title">Journey Through Time</h1>
+      <div class="timeline">
+        <div class="progress-bar"></div>
+
+        <div class="timeline-item" data-year="2020">
+          <div class="timeline-content">
+            <span class="year">2020</span>
+            <div class="content-card">
+              <h3>Project Launch</h3>
+              <p>Initial concept development and team formation</p>
+              <div class="milestone-icon">🚀</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-year="2021">
+          <div class="timeline-content">
+            <span class="year">2021</span>
+            <div class="content-card">
+              <h3>Major Breakthrough</h3>
+              <p>Achieved significant milestones in development</p>
+              <div class="milestone-icon">💡</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-year="2022">
+          <div class="timeline-content">
+            <span class="year">2022</span>
+            <div class="content-card">
+              <h3>Global Expansion</h3>
+              <p>Extended reach to international markets</p>
+              <div class="milestone-icon">🌍</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-year="2023">
+          <div class="timeline-content">
+            <span class="year">2023</span>
+            <div class="content-card">
+              <h3>Future Vision</h3>
+              <p>Setting new goals for the next phase</p>
+              <div class="milestone-icon">⭐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

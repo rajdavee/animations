@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.background-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-layer {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    will-change: transform;
+}
+
+.pattern-layer {
+    background: linear-gradient(45deg, #1a1a2e 25%, transparent 25%) -50px 0,
+                linear-gradient(-45deg, #1a1a2e 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, transparent 75%, #1a1a2e 75%),
+                linear-gradient(-45deg, transparent 75%, #1a1a2e 75%);
+    background-size: 100px 100px;
+    background-color: #16213e;
+    opacity: 0.3;
+}
+
+.image-layer {
+    background: url('https://picsum.photos/1920/1080?random=1') center/cover;
+    filter: saturate(1.2) contrast(1.1);
+}
+
+.overlay-layer {
+    background: radial-gradient(circle at center, 
+                rgba(26, 26, 46, 0) 0%,
+                rgba(26, 26, 46, 0.5) 50%,
+                rgba(26, 26, 46, 0.8) 100%);
+    mix-blend-mode: multiply;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    background: linear-gradient(45deg, #4a9eff, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: rgba(74, 158, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: rgba(74, 158, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}

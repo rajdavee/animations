@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.ripple-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.ripple-btn, .ripple-card, .ripple-icon {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.ripple-btn {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.ripple-btn.primary {
+    background: linear-gradient(45deg, #4a9eff, #6c63ff);
+}
+
+.ripple-card {
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.ripple-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    pointer-events: none;
+}
+
+[class*="ripple-"]:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .ripple-grid {
+        grid-template-columns: 1fr;
+    }
+}

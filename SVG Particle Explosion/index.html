@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Particle Explosion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="explosion-container">
+        <svg class="main-svg" viewBox="0 0 400 400">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <g class="particle-group"></g>
+          <circle
+            class="trigger-circle"
+            cx="200"
+            cy="200"
+            r="50"
+            fill="#4a9eff"
+          />
+        </svg>
+      </div>
+      <div class="controls">
+        <button class="explosion-btn">Trigger Explosion</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

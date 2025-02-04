@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Notification Banner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <button id="showNotification">Show Notification</button>
+    </div>
+
+    <div class="notification" id="notification">
+      <div class="notification-content">
+        <div class="notification-icon">📢</div>
+        <div class="notification-text">
+          <h3>New Message!</h3>
+          <p>This is an important notification for you.</p>
+        </div>
+      </div>
+      <button class="close-btn">×</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

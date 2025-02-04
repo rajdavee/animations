@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Hover Trails</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="icons-grid">
+        <div class="icon-wrapper" data-icon="🚀">
+          <div class="icon">🚀</div>
+          <span class="label">Launch</span>
+        </div>
+        <div class="icon-wrapper" data-icon="💡">
+          <div class="icon">💡</div>
+          <span class="label">Ideas</span>
+        </div>
+        <div class="icon-wrapper" data-icon="⚡">
+          <div class="icon">⚡</div>
+          <span class="label">Energy</span>
+        </div>
+        <div class="icon-wrapper" data-icon="🎨">
+          <div class="icon">🎨</div>
+          <span class="label">Create</span>
+        </div>
+      </div>
+      <div id="trail-container"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

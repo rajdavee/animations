@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Parallax</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="parallax-card">
+      <div class="parallax-layer bg-layer">
+        <div class="gradient-bg"></div>
+        <div class="particles"></div>
+      </div>
+      <div class="parallax-layer middle-layer">
+        <img src="https://picsum.photos/800/600?random=1" alt="Middle Layer" />
+      </div>
+      <div class="parallax-layer content-layer">
+        <h1>Hover Effect</h1>
+        <p>Move your mouse to explore</p>
+        <button class="explore-btn">Discover More</button>
+      </div>
+      <div class="parallax-layer glow-layer"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="parallax.js"></script>
+  </body>
+</html>

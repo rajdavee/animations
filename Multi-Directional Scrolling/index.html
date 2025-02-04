@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Directional Scrolling</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Scroll Journey</h1>
+      <p class="subtitle">Explore the multi-directional experience</p>
+    </section>
+
+    <div class="scroll-section">
+      <div class="horizontal-scroll">
+        <div class="scroll-item" data-speed="0.5">
+          <h2>Design</h2>
+          <div
+            class="image-box"
+            style="
+              background-image: url('https://picsum.photos/800/500?random=1');
+            "
+          ></div>
+        </div>
+        <div class="scroll-item" data-speed="-0.3">
+          <h2>Develop</h2>
+          <div
+            class="image-box"
+            style="
+              background-image: url('https://picsum.photos/800/500?random=2');
+            "
+          ></div>
+        </div>
+        <div class="scroll-item" data-speed="0.7">
+          <h2>Deploy</h2>
+          <div
+            class="image-box"
+            style="
+              background-image: url('https://picsum.photos/800/500?random=3');
+            "
+          ></div>
+        </div>
+      </div>
+
+      <div class="vertical-elements">
+        <div class="float-text" data-speed="0.2">Innovation</div>
+        <div class="float-text" data-speed="-0.4">Creativity</div>
+        <div class="float-text" data-speed="0.6">Technology</div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Our Story</h2>
+      <p>Continue scrolling to explore more</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>

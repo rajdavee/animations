@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Transitions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="transition-overlay">
+      <div class="overlay-panel panel-1"></div>
+      <div class="overlay-panel panel-2"></div>
+      <div class="overlay-panel panel-3"></div>
+      <div class="transition-loader">
+        <div class="loader-circle"></div>
+        <span class="loader-text">Loading</span>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <button class="nav-link" data-page="home">Home</button>
+      <button class="nav-link" data-page="about">About</button>
+      <button class="nav-link" data-page="work">Work</button>
+      <button class="nav-link" data-page="contact">Contact</button>
+    </nav>
+
+    <main>
+      <section id="home" class="page active">
+        <h1>Welcome</h1>
+        <p>Click navigation to see transitions</p>
+      </section>
+
+      <section id="about" class="page">
+        <h1>About Us</h1>
+        <p>Discover our story</p>
+      </section>
+
+      <section id="work" class="page">
+        <h1>Our Work</h1>
+        <p>View our portfolio</p>
+      </section>
+
+      <section id="contact" class="page">
+        <h1>Contact</h1>
+        <p>Get in touch</p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="transitions.js"></script>
+  </body>
+</html>

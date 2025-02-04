@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section Transitions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="transition-overlays">
+      <div class="overlay overlay-1"></div>
+      <div class="overlay overlay-2"></div>
+      <div class="overlay overlay-3"></div>
+    </div>
+
+    <nav class="section-nav">
+      <button class="nav-btn" data-section="home">Home</button>
+      <button class="nav-btn" data-section="about">About</button>
+      <button class="nav-btn" data-section="projects">Projects</button>
+      <button class="nav-btn" data-section="contact">Contact</button>
+    </nav>
+
+    <main>
+      <section id="home" class="section active">
+        <h1>Welcome</h1>
+        <p>Explore smooth transitions</p>
+      </section>
+
+      <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>Discover our story</p>
+      </section>
+
+      <section id="projects" class="section">
+        <h1>Our Projects</h1>
+        <p>See our work</p>
+      </section>
+
+      <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>Get in touch</p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="transitions.js"></script>
+  </body>
+</html>

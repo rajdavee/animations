@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Flip Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="card" data-title="Design">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://picsum.photos/400/300?random=1" alt="Design" />
+            <h3>Design</h3>
+          </div>
+          <div class="card-back">
+            <h3>Creative Design</h3>
+            <p>Explore innovative design solutions</p>
+            <button class="details-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card structure with different content and images -->
+      <div class="card" data-title="Development">
+        <div class="card-inner">
+          <div class="card-front">
+            <img
+              src="https://picsum.photos/400/300?random=2"
+              alt="Development"
+            />
+            <h3>Development</h3>
+          </div>
+          <div class="card-back">
+            <h3>Web Development</h3>
+            <p>Building the future of web</p>
+            <button class="details-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-title="Marketing">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://picsum.photos/400/300?random=3" alt="Marketing" />
+            <h3>Marketing</h3>
+          </div>
+          <div class="card-back">
+            <h3>Digital Marketing</h3>
+            <p>Reach your target audience</p>
+            <button class="details-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

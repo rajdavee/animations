@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Visualization Morphing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Interactive Data Visualization</h1>
+        <p class="subtitle">Watch the data transform seamlessly</p>
+      </header>
+
+      <div class="visualization-container">
+        <svg viewBox="0 0 800 400" class="morphing-svg">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <path
+            class="guide-path"
+            stroke="#2a2a4a"
+            stroke-width="1"
+            fill="none"
+          />
+          <path
+            class="line-path"
+            stroke="#4a9eff"
+            stroke-width="3"
+            fill="none"
+            filter="url(#glow)"
+          />
+
+          <circle class="dot-path" r="6" fill="#4a9eff" filter="url(#glow)" />
+
+          <text x="50%" y="85%" text-anchor="middle" class="status-text">
+            Interactive Data Visualization
+          </text>
+        </svg>
+
+        <div class="data-info">
+          <div class="metric">
+            <span class="metric-value">0</span>
+            <span class="metric-label">Data Points</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="morph-btn active" data-shape="wave">
+          <span class="btn-icon">📈</span>
+          <span class="btn-text">Wave Pattern</span>
+        </button>
+        <button class="morph-btn" data-shape="circle">
+          <span class="btn-icon">⭕</span>
+          <span class="btn-text">Circular Flow</span>
+        </button>
+        <button class="morph-btn" data-shape="zigzag">
+          <span class="btn-icon">⚡</span>
+          <span class="btn-text">Growth Spikes</span>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

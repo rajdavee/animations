@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a2e;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.parallax-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.background {
+    background: linear-gradient(45deg, #0a0a2e, #1a1a4a);
+    transform-style: preserve-3d;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+.middle {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.floating-elements .element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.accent-line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+    background: linear-gradient(45deg, #fff, #7a7aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.cta-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #4a4aff, #7a7aff);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.spacer {
+    height: 100vh;
+    background: linear-gradient(to bottom, #0a0a2e, #000);
+}
