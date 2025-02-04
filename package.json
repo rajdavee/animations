@@ -1,0 +1,15 @@
+{
+  "name": "gsap-animations",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scan": "node scanner.js",
+    "start": "npm run scan && npx live-server"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
